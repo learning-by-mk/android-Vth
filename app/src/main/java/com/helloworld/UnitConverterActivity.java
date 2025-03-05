@@ -2,6 +2,7 @@ package com.helloworld;
 
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
@@ -10,29 +11,29 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class CounterActivity extends AppCompatActivity {
-
-    private Button btnClick;
-    private TextView textCounted;
+public class UnitConverterActivity extends AppCompatActivity {
+    private Button btnConvert;
+    private EditText etNumber;
+    private TextView tvResult;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_counter);
+        setContentView(R.layout.activity_unit_converter);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        textCounted = findViewById(R.id.textCounted);
-        btnClick = findViewById(R.id.btnClick);
 
-        btnClick.setOnClickListener(v -> counterClicked());
-    }
+        btnConvert = findViewById(R.id.btnConvert);
+        etNumber = findViewById(R.id.etNumber);
+        tvResult = findViewById(R.id.tvResult);
 
-    public void counterClicked() {
-        int count = Integer.parseInt(String.valueOf(textCounted.getText()));
-        count++;
-        textCounted.setText(String.valueOf(count));
+        btnConvert.setOnClickListener(v -> {
+            double input = Double.parseDouble(etNumber.getText().toString());
+            double result = input * 2.20462;
+            tvResult.setText(result + " pounds");
+        });
     }
 }
