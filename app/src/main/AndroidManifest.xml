@@ -13,7 +13,7 @@
         android:theme="@style/Theme.HelloWorld"
         tools:targetApi="31">
         <activity
-            android:name=".LuckyNumberActivity"
+            android:name=".th3Cau9FrenchTeacherApp"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,9 +22,32 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".th3Cau8PlanetsApp"
+            android:exported="true" />
+        <activity
+            android:name=".th3Cau7ListView"
+            android:exported="true" />
+        <activity
+            android:name=".th3Cau6ListView"
+            android:exported="true" />
+        <activity
+            android:name=".th3Cau5AppCalculate"
+            android:exported="true" />
+        <activity
+            android:name=".th3Cau3Spinner"
+            android:exported="true" />
+        <activity
+            android:name=".th3Cau2RadioButton"
+            android:exported="true" />
+        <activity
+            android:name=".th3Cau1Checkbox"
+            android:exported="true" />
+        <activity
+            android:name=".LuckyNumberActivity"
+            android:exported="true" />
+        <activity
             android:name=".UnitConverterActivity"
-            android:exported="true"/>
-
+            android:exported="true" />
         <activity
             android:name=".MusicActivity"
             android:exported="true" />
@@ -36,13 +59,6 @@
             android:exported="true" />
         <activity
             android:name=".LoginFacebookActivity"
-            android:exported="true" /> <!-- <intent-filter> -->
-        <!-- <action android:name="android.intent.action.MAIN" /> -->
-        <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-        <!-- </intent-filter> -->
-        <!-- </activity> -->
-        <activity
-            android:name=".TestActivity"
             android:exported="true" /> <!-- <intent-filter> -->
         <!-- <action android:name="android.intent.action.MAIN" /> -->
         <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
