@@ -26,8 +26,9 @@ public class th3Cau7ListView extends AppCompatActivity {
             return insets;
         });
 
+        int layout = R.layout.list_item;
         listView = findViewById(R.id.listView);
-        CustomAdapter adapter = new CustomAdapter(this, titles, subtitles1, subtitles2, images);
+        CustomAdapter adapter = new CustomAdapter(this, titles, subtitles1, subtitles2, images, layout);
         listView.setAdapter(adapter);
     }
 }

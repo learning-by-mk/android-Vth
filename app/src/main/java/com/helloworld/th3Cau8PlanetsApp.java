@@ -13,7 +13,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class th3Cau8PlanetsApp extends AppCompatActivity {
     private ListView lvPlanets;
     private String[] titles = {"Earth", "Jupiter", "Mars", "Neptune", "Pluto", "Mercury", "Saturn", "Uranus", "Venus"};
-    private String[] subtitles = {"11", "21", "11", "12", "12", "11", "11", "11", "11"}; ;
+    private String[] subtitles = {"11", "21", "11", "12", "12", "11", "11", "11", "11"};
     private int[] images = {R.drawable.earth, R.drawable.jupiter, R.drawable.mars, R.drawable.neptune, R.drawable.pluto, R.drawable.mercury, R.drawable.saturn, R.drawable.uranus, R.drawable.venus};
     @Override
     protected void onCreate(Bundle savedInstanceState) {

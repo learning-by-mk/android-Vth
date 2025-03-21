@@ -13,12 +13,15 @@ public class CustomAdapter extends BaseAdapter {
     private String[] titles, subtitle1, subtitle2;
     private int[] images;
 
-    public CustomAdapter(Context context, String[] titles, String[] subtitle1, String[] subtitle2, int[] images) {
+    private int layout;
+
+    public CustomAdapter(Context context, String[] titles, String[] subtitle1, String[] subtitle2, int[] images, int layout) {
         this.context = context;
         this.titles = titles;
         this.subtitle1 = subtitle1;
         this.subtitle2 = subtitle2;
         this.images = images;
+        this.layout = layout;
     }
     @Override
     public int getCount() {
@@ -35,21 +38,33 @@ public class CustomAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+        ViewHolder holder;
         if (convertView == null) {
-            convertView = LayoutInflater.from(context).inflate(R.layout.list_item, parent, false);
+            convertView = LayoutInflater.from(context).inflate(layout, parent, false);
+
+            holder = new ViewHolder();
+            holder.imageView = convertView.findViewById(R.id.itemImage);
+            holder.titleView = convertView.findViewById(R.id.itemTitle);
+            holder.subtitle1View = convertView.findViewById(R.id.itemSubtitle1);
+            holder.subtitle2View = convertView.findViewById(R.id.itemSubtitle2);
+
+            convertView.setTag(holder);
+        }else {
+            holder = (ViewHolder) convertView.getTag();
         }
 
-        ImageView imageView = convertView.findViewById(R.id.itemImage);
-        TextView titleView = convertView.findViewById(R.id.itemTitle);
-        TextView subtitle1View = convertView.findViewById(R.id.itemSubtitle1);
-        TextView subtitle2View = convertView.findViewById(R.id.itemSubtitle2);
-
-        imageView.setImageResource(images[position]);
-        titleView.setText(titles[position]);
-        subtitle1View.setText(subtitle1[position]);
-        subtitle2View.setText(subtitle2[position]);
+        holder.imageView.setImageResource(images[position]);
+        holder.titleView.setText(titles[position]);
+        holder.subtitle1View.setText(subtitle1[position]);
+        holder.subtitle2View.setText(subtitle2[position]);
 
         return convertView;
     }
 
+    public class ViewHolder {
+        ImageView imageView;
+        TextView titleView;
+        TextView subtitle1View;
+        TextView subtitle2View;
+    }
 }
