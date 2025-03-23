@@ -1,15 +1,16 @@
-package com.helloworld;
+package com.helloworld.th3;
 
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import com.helloworld.R;
 
 public class th3Cau9FrenchTeacherApp extends AppCompatActivity {
     @Override

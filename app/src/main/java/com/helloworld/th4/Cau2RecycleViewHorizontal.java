@@ -1,4 +1,4 @@
-package com.helloworld;
+package com.helloworld.th4;
 
 import android.os.Bundle;
 
@@ -8,10 +8,12 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class th4Cau2RecycleViewHorizontal extends AppCompatActivity {
+import com.helloworld.CustomRecyclerAdapter;
+import com.helloworld.R;
+
+public class Cau2RecycleViewHorizontal extends AppCompatActivity {
     private RecyclerView rv;
     private int[] images = {R.drawable.a1, R.drawable.a2, R.drawable.a3, R.drawable.a4, R.drawable.a5, R.drawable.a6, R.drawable.a7, R.drawable.a8, R.drawable.a9, R.drawable.a10};
     private String[] titles = {"Title 1", "Title 2", "Title 3", "Title 4", "Title 5", "Title 6", "Title 7", "Title 8", "Title 9", "Title 10"};
@@ -30,8 +32,6 @@ public class th4Cau2RecycleViewHorizontal extends AppCompatActivity {
         rv.setLayoutManager(new GridLayoutManager(this, 3));
 //        LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
 //        rv.setLayoutManager(layoutManager);
-
-
 
         CustomRecyclerAdapter adapter = new CustomRecyclerAdapter(this, images, titles);
         rv.setAdapter(adapter);

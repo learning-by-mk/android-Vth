@@ -13,7 +13,7 @@
         android:theme="@style/Theme.HelloWorld"
         tools:targetApi="31">
         <activity
-            android:name=".th4Cau2RecycleViewHorizontal"
+            android:name=".th4.RecycleViewVerticalActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,31 +22,34 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".th4Cau1"
+            android:name=".th4.Cau2RecycleViewHorizontal"
             android:exported="true" />
         <activity
-            android:name=".th3Cau9FrenchTeacherApp"
+            android:name=".th4.th4Cau1"
             android:exported="true" />
         <activity
-            android:name=".th3Cau8PlanetsApp"
+            android:name=".th3.th3Cau9FrenchTeacherApp"
             android:exported="true" />
         <activity
-            android:name=".th3Cau7ListView"
+            android:name=".th3.th3Cau8PlanetsApp"
             android:exported="true" />
         <activity
-            android:name=".th3Cau6ListView"
+            android:name=".th3.th3Cau7ListView"
             android:exported="true" />
         <activity
-            android:name=".th3Cau5AppCalculate"
+            android:name=".th3.th3Cau6ListView"
             android:exported="true" />
         <activity
-            android:name=".th3Cau3Spinner"
+            android:name=".th3.th3Cau5AppCalculate"
             android:exported="true" />
         <activity
-            android:name=".th3Cau2RadioButton"
+            android:name=".th3.th3Cau3Spinner"
             android:exported="true" />
         <activity
-            android:name=".th3Cau1Checkbox"
+            android:name=".th3.th3Cau2RadioButton"
+            android:exported="true" />
+        <activity
+            android:name=".th3.th3Cau1Checkbox"
             android:exported="true" />
         <activity
             android:name=".LuckyNumberActivity"

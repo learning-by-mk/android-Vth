@@ -1,8 +1,6 @@
-package com.helloworld;
+package com.helloworld.th3;
 
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.Toast;
 
@@ -11,6 +9,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import com.helloworld.R;
 
 public class th3Cau1Checkbox extends AppCompatActivity {
     private CheckBox checkBox;
